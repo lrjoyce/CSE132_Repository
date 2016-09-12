@@ -68,39 +68,49 @@ void loop() {
 
 //
 int shiftRight(int num, int n){
+  num = num >> n;
   return num;
 }
 
 int shiftLeft(int num, int n){
+  num = num << n;
   return num;
 }
 
 // Fix the following functions, using only the bitwise and Boolean operators
 int hasAOne(int num) {
+  num = num && 1;
   return num;
 }
 
 int hasAZero(int num) {
+  num = ~num || 0;
   return num;
 }
 
 int leastSigHasAOne(int num) {
+  num = num & 1;
   return num;
 }
 
 int isNegativeInt(int num) {
+  // check the leftmost (greatest) bit to see if it is negative
+  num = (num >> 15) && 1 ;
   return num;
 }
 
 int isNegativeLong(long num) {
+  num = (num >> 31) && 1;
   return num;
 }
 
 int isNegativeChar(char num) {
+  num = (num >> 7) && 1;
   return num;
 }
 
 int negate(int num) {
+  num = ~num + 1;
   return num;
 }
 
